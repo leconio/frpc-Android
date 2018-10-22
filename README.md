@@ -49,3 +49,5 @@
 
 ![winxin_pay.png](https://github.com/TelDragon/guacamole/blob/master/docs/_static/img/weixin_pay.png?raw=true)
  
+* 感谢
+[bjbjoaoa@qq.com](mailto:bjbjoaoa@qq.com)
