@@ -97,6 +97,8 @@ anaconda-ks.cfg  basic.apk
 
 * 编译(将sdk文件拷贝至"/usr/local/go/src/github.com/fatedier/frp/cmd/frpc" 下)
 
+[https://github.com/TelDragon/frpc-Android/blob/master/sdk/Android-SDK/main.go](https://github.com/TelDragon/frpc-Android/blob/master/sdk/Android-SDK/main.go)
+
 ```
 [root@localhost ~]# gomobile bind -target=android github.com/fatedier/frp/cmd/frpc                      #编译(不报错的情况)
 [root@localhost ~]# ls
