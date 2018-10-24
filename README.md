@@ -8,6 +8,21 @@
 
 <img src="https://github.com/TelDragon/Dragon/blob/master/image/frp-Android-02.png" width="266" alt="frp-Android-02.png">   <img src="https://github.com/TelDragon/Dragon/blob/master/image/frp-Android-03.png" width="266" alt="frp-Android-03.png">   <img src="https://github.com/TelDragon/Dragon/blob/master/image/frp-Android-04.png" width="266" alt="frp-Android-04.png">
 
+## 开发说明
+
+* 软件Android studio
+* Android, .aar 库
+frp使用gombile实现了一份go代码编译为android和ios平台下面可以直接调用的sdk类库
+
+## Android SDK 用法
+在Android系统提供的sdk形式是一个后缀为.aar的类库文件,开发的时候只需要把arr类库文件引入android项目即可.
+
+* 导入包
+
+```
+import frpclib.Frpclib;
+```
+
 ## 项目逻辑
 
 * 启动初始化，写入预连接的服务器地址，服务器端口号，服务器toke
