@@ -25,17 +25,11 @@ go version go1.9.2 linux/amd64
 
 ```
 [root@localhost ~]# mkdir -p /usr/local/go/src/golang.org/x                                       #创建golang目录(有时会被墙所以手动)
-
-[root@localhost ~]# cd /usr/local/go/src/golang.org/x											  #进入目录
-
+[root@localhost ~]# cd /usr/local/go/src/golang.org/x											                        #进入目录
 [root@localhost x]# git clone https://github.com/golang/mobile.git                                #克隆库
-
 [root@localhost ~]# go build golang.org/x/mobile/cmd/gomobile                                     #编译 
-
 [root@localhost ~]# go install golang.org/x/mobile/cmd/gomobile                                   #安装
-
 [root@localhost ~]# gomobile init -v                          
-
 [root@localhost ~]# gomobile version                                                              #验证
 gomobile version +5704e18 Mon Jan 22 17:02:51 2018 +0000 (android); androidSDK=
 
@@ -46,10 +40,10 @@ gomobile version +5704e18 Mon Jan 22 17:02:51 2018 +0000 (android); androidSDK=
 ```
 Centos 
 [root@localhost ~]# yum -y install java java-1.8.0-openjdk*                                       #Centos下安装
+[root@localhost ~]# java -version                                                                 #验证
 
 ubuntu
 [root@localhost ~]# apt-get install openjdk-8-jdk                                                 #ubuntu下安装
-
 [root@localhost ~]# java -version                                                                 #验证
 ```
 
