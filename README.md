@@ -19,7 +19,7 @@ frp使用gombile实现了一份go代码编译为android和ios平台下面可以�
 
 * 导入包
 
-```
+```java
 import frpclib.Frpclib;
 ```
 
