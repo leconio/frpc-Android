@@ -70,7 +70,7 @@ ubuntu
 [root@localhost ~]# mv android-sdk-linux ~/go/                                                           #移动到用户目录下的go目录
 [root@localhost ~]#  ~/go/android-sdk-linux/tools/android update sdk -u                                  #安装(请耐心等待)
 [root@localhost ~]# gomobile version                                                                     #验证
-gomobile version +92f3b9c Wed Oct 10 16:34:05 2018 +0000 (android); androidSDK=/home/yuanyl/go/android-sdk-linux/platforms/android-28
+gomobile version +92f3b9c Wed Oct 10 16:34:05 2018 +0000 (android); androidSDK=/root/go/android-sdk-linux/platforms/android-28
 
 ```
 
