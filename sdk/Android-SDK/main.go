@@ -26,8 +26,8 @@ import (
 	"github.com/fatedier/frp/client"
 	"github.com/fatedier/frp/models/config"
 	"github.com/fatedier/frp/utils/log"
-	//"bytes"
 )
+
 
 func Run(confFile string){
 	var err error
@@ -35,31 +35,33 @@ func Run(confFile string){
 	//data, err := Asset("config.ini")
 	if err != nil {
 		fmt.Printf("load ini err")
-	}
+}
 	//iniReader:=bytes.NewReader(data)
 	//conf, err = ini.Load(iniReader)
 	conf, err = ini.LoadFile(confFile)
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+//		os.Exit(0)
 	}
+
 	config.ClientCommonCfg, err = config.LoadClientCommonConf(conf)
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+//              os.Exit(0)
 	}
 	config.ClientCommonCfg.ConfigFile = confFile
 
-	pxyCfgs, vistorCfgs, err := config.LoadProxyConfFromFile(config.ClientCommonCfg.User, conf, config.ClientCommonCfg.Start)
+
+	pxyCfgs, visitorCfgs, err := config.LoadProxyConfFromFile(config.ClientCommonCfg.User, conf, config.ClientCommonCfg.Start)
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+//              os.Exit(0)
 	}
 
 	log.InitLog(config.ClientCommonCfg.LogWay, config.ClientCommonCfg.LogFile,
 		config.ClientCommonCfg.LogLevel, config.ClientCommonCfg.LogMaxDays)
 
-	svr := client.NewService(pxyCfgs, vistorCfgs)
+	svr := client.NewService(pxyCfgs, visitorCfgs)
 
 	// Capture the exit signal if we use kcp.
 	if config.ClientCommonCfg.Protocol == "kcp" {
@@ -69,7 +71,7 @@ func Run(confFile string){
 	err = svr.Run()
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+//		os.Exit(0)
 	}
 }
 
@@ -79,5 +81,5 @@ func HandleSignal(svr *client.Service) {
 	<-ch
 	svr.Close()
 	time.Sleep(250 * time.Millisecond)
-	os.Exit(0)
+//	os.Exit(0)
 }
