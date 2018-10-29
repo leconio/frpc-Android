@@ -131,6 +131,6 @@
             android:textSize="15dp"
             android:textColor="@android:color/darker_gray"
             android:layout_height="wrap_content"
-            android:text="frpc : 0.16.0 "/>
+            android:text="frpc : 0.17.0 "/>
     </LinearLayout>
 </LinearLayout>
