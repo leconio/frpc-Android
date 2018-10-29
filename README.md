@@ -10,7 +10,7 @@
 
 ## 开发说明
 
-* 软件Android studio
+* 软件[Android studio 3.2](http://www.android-studio.org/)
 * Android, .aar 库
 frp使用gombile实现了一份go代码编译为android和ios平台下面可以直接调用的sdk类库
 
