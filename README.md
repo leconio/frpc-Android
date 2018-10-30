@@ -44,14 +44,14 @@ import frpclib.Frpclib;
   * 自定义域名、泛域名
   * 分享隧道信息
   * 后台运行
-  * 支持frps 0.13.0/0.15.0/0.16.0
+  * 支持frps 0.13.0/0.15.0/0.16.0/0.17.0/0.18.0/
 * 不支持
   * 保存配置文件(退出软件app后重新进入需再次填写信息)
 
   
  ## 开发计划
  
-* 支持多frps服务器版本
+* 支持多frps服务器版本 0.13.0/0.15.0/0.16.0/0.17.0/0.18.0/
 * 支持IOS 苹果app [https://github.com/TelDragon/frpc-IOS](https://github.com/TelDragon/frpc-IOS)
 * 用户平台登录
 * 获取用户位置信息收录统计
