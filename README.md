@@ -57,6 +57,7 @@ import frpclib.Frpclib;
 * 获取用户位置信息收录统计
 * 获取frps服务器列表信息，提供用户服务器选择匹配
 * 保存配置信息
+* 抛弃frpc.ini 启动文件，直接使用“execute”函数执行命令
   
   
 ## 捐助
