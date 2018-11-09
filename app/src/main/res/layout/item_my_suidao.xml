@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="12dp"
-            android:src="@mipmap/ic_radio_btn_default"
+            android:src="@mipmap/ic_launcher"
             android:visibility="visible"/>
     </FrameLayout>
 

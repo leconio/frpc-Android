@@ -217,15 +217,15 @@ public class knife_net_list extends BaseRecyclerViewSwipeRefreshActivity<SuiDao>
                 } else {
                     holder1.circleBox.setVisibility(View.GONE);
                 }
-                holder1.circleBox.setImageResource(flags.get(position) ? R.mipmap.ic_radio_btn_selected
-                        : R.mipmap.ic_radio_btn_default);
+                holder1.circleBox.setImageResource(flags.get(position) ? R.mipmap.ic_launcher
+                        : R.mipmap.ic_launcher);
                 holder1.circleBox.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         boolean flag = flags.get(position);
                         flags.put(position, !flag);
-                        holder1.circleBox.setImageResource(!flag ? R.mipmap.ic_radio_btn_selected
-                                : R.mipmap.ic_radio_btn_default);
+                        holder1.circleBox.setImageResource(!flag ? R.mipmap.ic_launcher
+                                : R.mipmap.ic_launcher);
                     }
                 });
             }
