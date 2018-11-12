@@ -1,8 +1,11 @@
 # 项目介绍
 
-[https://github.com/fatedier/frp](https://github.com/fatedier/frp)
+frp 源项目 [https://github.com/fatedier/frp](https://github.com/fatedier/frp)
 
-[https://www.frp.fun/](https://www.frp.fun/)
+frp 帮助网站 [https://www.frp.fun/](https://www.frp.fun/)
+
+QQ交流群 [222670265](https://jq.qq.com/?_wv=1027&k=5kkmkwa)
+
 
 ## 项目 demo 大概简要图
 
