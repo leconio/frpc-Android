@@ -1,8 +1,11 @@
 # 项目介绍
 
-[https://github.com/fatedier/frp](https://github.com/fatedier/frp)
+frp 源项目 [https://github.com/fatedier/frp](https://github.com/fatedier/frp)
 
-[https://www.frp.fun/](https://www.frp.fun/)
+frp 帮助网站 [https://www.frp.fun/](https://www.frp.fun/)
+
+QQ交流群 [222670265](https://jq.qq.com/?_wv=1027&k=5kkmkwa)
+
 
 ## 项目 demo 大概简要图
 
@@ -80,6 +83,4 @@ frpc-Android 是一个免费且开源的项目，我们欢迎任何人为其开�
  
 * 感谢
 
-[bjbjoaoa@qq.com](mailto:bjbjoaoa@qq.com)
-
-[momo@188.com](mailto:momo@188.com)
+[bjbjoaoa@qq.com](mailto:bjbjoaoa@qq.com) [momo@188.com](mailto:momo@188.com) [zqy1301@qq.com](mailto:zqy1301@qq.com)
