@@ -77,9 +77,9 @@ frpc-Android 是一个免费且开源的项目，我们欢迎任何人为其开�
 
 ## 捐助
 
-* 微信支付捐助
+* 如果您觉得[frpc-Android](https://github.com/TelDragon/frpc-Android)对你有帮助，欢迎给予我们一定的捐助来维持项目的长期发展。
 
-![winxin_pay.png](https://github.com/TelDragon/guacamole/blob/master/docs/_static/img/weixin_pay.png?raw=true)
+<img src="https://github.com/TelDragon/Dragon/blob/master/image/WeChat.png" width="266" alt="frp-Android-02.png"> <img src="https://github.com/TelDragon/Dragon/blob/master/image/Alipay.png" width="266" alt="frp-Android-02.png">
  
 * 感谢
 
