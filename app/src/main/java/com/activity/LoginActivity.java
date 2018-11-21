@@ -108,7 +108,7 @@ public class LoginActivity extends Activity {
                 String admin_addr = "admin_addr = 0.0.0.0"+"\r\n";
                 String admin_port = "admin_port = 7400"+"\r\n";
                 String admin_user = "admin_user = admin"+"\r\n";
-                String admin_pwd = "admin_passwd = admin"+"\r\n";
+                String admin_pwd = "admin_pwd = admin"+"\r\n";
                 String log_file = "log_file = /storage/emulated/0/Android/data/com.frp.fun/files/frpc.log"+"\r\n";
                 String log_level = "log_level = info"+"\r\n";
                 String log_max_days = "log_max_days = 3"+"\r\n";
