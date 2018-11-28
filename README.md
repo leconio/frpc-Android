@@ -18,6 +18,7 @@ QQ group [222670265](https://jq.qq.com/?_wv=1027&k=5kkmkwa)
 
 ## Development instructions
 
+* [Compilation process](https://github.com/FrpcCluster/frpc-Android/blob/master/Compile_zh.md)
 * software[Android studio 3.2](http://www.android-studio.org/)
 * Android, .aar Library
 Frp uses gombile to implement a go code compiled into android and ios platform can directly call the sdk class library
