@@ -338,18 +338,5 @@ public class IniFile {
         } catch (IOException e) {  
             e.printStackTrace();  
         }  
-    }  
-  /*
-   IniFile file = new IniFile(new File("D:/dev/idressworkmobile/ztest/src/ztest/FacePositive.ini"));
-        System.out.println(file.get("Config0", "PoinX0"));
-//      file.save(new File("D:/c.ini"));
-        file.remove("ModelFace");
-        file.save();
-
-        IniFile file2 = new IniFile();
-        file2.set("Config", "属性1", "值1");
-        file2.set("Config", "属性2", "值2");
-        file2.set("Config1", "属性3", "值3");
-        file2.save(new File("d:/d.ini"));
-  * */
+    }
 }  

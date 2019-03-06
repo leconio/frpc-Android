@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.frpc">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,13 +12,14 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name="com.activity.MyApplication"
+        android:name="com.activity.FrpAndroid"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name="com.activity.SplashActivity"
             android:label="@string/app_name"
@@ -28,10 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.activity.LoginActivity"></activity>
-        <activity android:name="com.activity.knife_net_Activity"></activity>
-        <activity android:name="com.activity.knife_net_list"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name="com.activity.LoginActivity" />
+        <activity android:name="com.activity.KnifeNetActivity" />
+        <activity android:name="com.activity.KnifeNetListActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
     </application>
 
 </manifest>

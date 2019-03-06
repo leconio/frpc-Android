@@ -12,14 +12,6 @@
         android:background="@android:color/white"
         android:gravity="center_vertical">
 
-        <!--<ImageView-->
-            <!--android:id="@+id/back"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:background="?attr/item_bg"-->
-            <!--android:padding="10dp"-->
-            <!--/>-->
 
         <TextView
             style="@style/TitleTextView"
@@ -190,6 +182,24 @@
             </LinearLayout>
 
 
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            style="@style/ItemLayout">
+
+            <TextView
+                style="@style/Label"
+                android:drawableLeft="@drawable/ic_must_fill"
+                android:text="唯一名称"/>
+
+            <EditText
+                android:hint="请填唯一名称"
+                android:id="@+id/uuid_name"
+                android:textColor="@android:color/black"
+                style="@style/InputEditText"/>
         </LinearLayout>
         <View
             android:layout_width="match_parent"
