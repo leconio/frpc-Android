@@ -25,7 +25,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
 
 public class KnifeNetListActivity extends AppCompatActivity {
 
@@ -44,7 +43,6 @@ public class KnifeNetListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((R.layout.activity_my_suidao));
-        ButterKnife.bind(this);
         assignViews();
         loadData();
         initEvent();
@@ -69,7 +67,7 @@ public class KnifeNetListActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (adapter.cancel(false)) {
+        if (!adapter.cancel(true)) {
             super.onBackPressed();
         }
     }
@@ -104,7 +102,7 @@ public class KnifeNetListActivity extends AppCompatActivity {
             @Override
             public void onClick(int position) {
                 selectPosition = position;
-                selectTextView.setText("已选择：" + mList.get(position).getName());
+                selectTextView.setText("已选择：" + mList.get(position).getTime());
             }
         });
     }
@@ -160,10 +158,22 @@ public class KnifeNetListActivity extends AppCompatActivity {
             new Thread() {
                 @Override
                 public void run() {
-                    for (int pos : arrayList) {
-                        SuiDao suiDao = mList.get(pos);
-                        DBSuiDaoHelper.deletesuidao(suiDao.getId());
+                    List<SuiDao> suiDaos = DBSuiDaoHelper.queryAll();
+                    boolean[] originPos = new boolean[suiDaos.size()];
+                    for (int i = 0; i < suiDaos.size(); i++) {
+                        for (SuiDao suiDao1 : mList) {
+                            if (suiDaos.get(i).getId().equals(suiDao1.getId())) {
+                                originPos[i] = true;
+                            }
+                        }
                     }
+
+                    for (int i = 0; i < originPos.length; i++) {
+                        if (!originPos[i]) {
+                            DBSuiDaoHelper.deletesuidao(suiDaos.get(i).getId());
+                        }
+                    }
+
                 }
             }.start();
         }

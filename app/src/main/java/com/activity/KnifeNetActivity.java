@@ -305,7 +305,6 @@ public class KnifeNetActivity extends Activity {
             e.printStackTrace();
         } finally {
             try {
-                if (in != null) in.close();
                 if (out != null) out.close();
             } catch (IOException e) {
                 e.printStackTrace();
