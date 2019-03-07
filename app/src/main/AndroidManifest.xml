@@ -32,7 +32,12 @@
         </activity>
         <activity android:name="com.activity.LoginActivity" />
         <activity android:name="com.activity.KnifeNetActivity" />
-        <activity android:name="com.activity.KnifeNetListActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity
+            android:name="com.activity.KnifeNetListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name="com.activity.SGSActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
     </application>
 
 </manifest>

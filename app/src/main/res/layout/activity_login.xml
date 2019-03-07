@@ -44,7 +44,7 @@
                 android:layout_marginRight="50dp"
                 android:background="@null"
                 android:hint="服务器地址"
-                tools:text="10.118.60.11"
+                android:text="f.lecon.io"
                 android:textColor="@android:color/black"
                 android:textColorHint="#9F9FA0" />
 
@@ -67,7 +67,7 @@
                 android:background="@null"
                 android:hint="服务器端口号"
                 android:inputType="number"
-                tools:text="7000"
+                android:text="7000"
                 android:textColor="@android:color/black"
                 android:textColorHint="#9F9FA0" />
 
@@ -89,7 +89,7 @@
                 android:layout_marginRight="50dp"
                 android:background="@null"
                 android:hint="登录token"
-                tools:text="12345678"
+                android:text="12345678"
                 android:textColor="@android:color/black"
                 android:textColorHint="#9F9FA0" />
 

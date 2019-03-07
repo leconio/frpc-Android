@@ -94,7 +94,7 @@ public class KnifeNetListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (selectPosition != -1) {
                     SuiDao suiDao = mList.get(selectPosition);
-                    frpStart(suiDao.getTime());
+                    frpStart(suiDao.getName());
                 }
             }
         });
@@ -102,7 +102,7 @@ public class KnifeNetListActivity extends AppCompatActivity {
             @Override
             public void onClick(int position) {
                 selectPosition = position;
-                selectTextView.setText("已选择：" + mList.get(position).getTime());
+                selectTextView.setText("已选择：" + mList.get(position).getName());
             }
         });
     }
@@ -139,7 +139,7 @@ public class KnifeNetListActivity extends AppCompatActivity {
         @Override
         public void onSelect(int i, int i1) {
             selectPosition = i;
-            selectTextView.setText("已选择：" + mList.get(i).getTime());
+            selectTextView.setText("已选择：" + mList.get(i).getName());
         }
 
         @Override

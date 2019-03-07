@@ -105,7 +105,7 @@ public class LoginActivity extends Activity {
                 "admin_port = 7400" + "\r\n" +
                 "admin_user = admin" + "\r\n" +
                 "admin_pwd = admin" + "\r\n" +
-                "log_file = /storage/emulated/0/Android/data/com.frp.fun/files/frpc.log" + "\r\n" +
+                "log_file = " + getExternalFilesDir(null) + "/frpc.log" + "\r\n" +
                 "log_level = info" + "\r\n" +
                 "log_max_days = 3" + "\r\n" +
                 "pool_count = 5" + "\r\n" +

@@ -40,7 +40,7 @@ public class DBSuiDaoHelper {
     }
 
     public static boolean haveSameSetionName(String uid) {
-        return FrpAndroid.getDaoInstant().getSuiDaoDao().queryBuilder().where(SuiDaoDao.Properties.Time.eq(uid)).list().size() > 0;
+        return FrpAndroid.getDaoInstant().getSuiDaoDao().queryBuilder().where(SuiDaoDao.Properties.Name.eq(uid)).list().size() > 0;
     }
 
 }

@@ -18,6 +18,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class KnifeNetActivity extends Activity {
@@ -42,8 +44,6 @@ public class KnifeNetActivity extends Activity {
     private String domain_name;
     private String is_secret;
     private String is_compress;
-    private EditText uuidNameView;
-    private String uuidName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +67,6 @@ public class KnifeNetActivity extends Activity {
         compressCB = findViewById(R.id.compress);
         secretCB = findViewById(R.id.secret);
         saveBt = findViewById(R.id.save);
-        uuidNameView = findViewById(R.id.uuid_name);
-
     }
 
     private void initEvent() {
@@ -125,13 +123,9 @@ public class KnifeNetActivity extends Activity {
                         }
                     }
 
-                    if (uuidNameView.getText().length() < 2) {
-                        Toast.makeText(KnifeNetActivity.this, "请完善信息", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
 
                     suidaoInfo();//总和隧道信息
-                    save(uuidNameView.getText().toString());
+                    save();
                     finish();
                 } else {
                     Toast.makeText(KnifeNetActivity.this, "请完善信息", Toast.LENGTH_SHORT).show();
@@ -139,11 +133,11 @@ public class KnifeNetActivity extends Activity {
 
             }
 
-            private void save(final String name) {
+            private void save() {
                 new Thread() {
                     @Override
                     public void run() {
-                        if (!DBSuiDaoHelper.haveSameSetionName(uuidName)) {
+                        if (!DBSuiDaoHelper.haveSameSetionName(name)) {
                             copyToSD(name + "-" + FrpAndroid.FILENAME);//写入数据库
                             addsuidao(suidaoType, local_ip, local_port, remote_port, name, domain_name);//写入配置文件
                         }
@@ -176,7 +170,6 @@ public class KnifeNetActivity extends Activity {
         local_port = portEx.getText().toString();
         remote_port = remote_portEx.getText().toString();
         domain_name = domain_nameEx.getText().toString();
-        uuidName = uuidNameView.getText().toString();
         if (compressCB.isChecked()) {
             is_compress = "true";
         } else {
@@ -195,10 +188,12 @@ public class KnifeNetActivity extends Activity {
 
         //判断如果数据库已经拷贝成功，不需要再次拷贝
         File file = new File(this.getExternalFilesDir(null), dbName);
+        File logfile = new File(this.getExternalFilesDir(null), "/" + name + "frpc.log");
 
         try {
+            logfile.createNewFile();
             out = new FileOutputStream(file, true);
-            out.write(FrpAndroid.serverConfig.getBytes());
+            out.write(FrpAndroid.getServerConfig(name).getBytes());
             switch (suidaoType) {
                 case "tcp": {
                     String socket_name = "[" + name + "]\n";
@@ -320,7 +315,13 @@ public class KnifeNetActivity extends Activity {
         temp.setType(type);
         temp.setName(name);
         temp.setLink(link);
-        temp.setTime(uuidName);
+        temp.setTime(timeToInvitation());
         DBSuiDaoHelper.insertsuidao(temp);
+    }
+
+    public String timeToInvitation() {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        return sdf.format(date);
     }
 }

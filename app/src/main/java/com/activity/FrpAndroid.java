@@ -37,6 +37,10 @@ public class FrpAndroid extends Application {
         daoSession = daoMaster.newSession();
     }
 
+    public static String getServerConfig(String name) {
+        return serverConfig.replace("frpc.log", name + "frpc.log");
+    }
+
     public static DaoSession getDaoInstant() {
         return daoSession;
     }
